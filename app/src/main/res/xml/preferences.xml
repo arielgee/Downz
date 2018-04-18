@@ -1,0 +1,48 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/pref_key_switch_single_action"
+        android:title="@string/pref_title_single_action" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/pref_key_switch_show_full_url"
+        android:title="@string/pref_title_show_full_url" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/pref_key_switch_show_downloaded_percentage"
+        android:title="@string/pref_title_show_downloaded_percentage" />
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/pref_key_switch_notifications"
+        android:title="@string/pref_title_notifications" />
+
+    <!-- NOTE: EditTextPreference accepts EditText attributes. -->
+    <!-- NOTE: EditTextPreference's summary should be set to its value by the activity code. -->
+    <EditTextPreference
+        android:defaultValue=""
+        android:capitalize="none"
+        android:inputType="textUri"
+        android:key="@string/pref_key_text_recently_used_list_file"
+        android:maxLines="1"
+        android:selectAllOnFocus="false"
+        android:singleLine="true"
+        android:title="@string/pref_title_recently_used_list_file" />
+
+    <EditTextPreference
+        android:capitalize="none"
+        android:inputType="textUri"
+        android:key="@string/pref_key_text_download_folder"
+        android:maxLines="1"
+        android:selectAllOnFocus="false"
+        android:singleLine="true"
+        android:title="@string/pref_title_download_folder" />
+
+    <Preference
+        android:title="@string/pref_title_restore_default_settings"
+        android:key="@string/pref_key_button_reset_settings" />
+
+</PreferenceScreen>

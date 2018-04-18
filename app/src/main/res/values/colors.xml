@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#2AA31B</color>
+
+    <color name="colorGrayText">#808080</color>
+    <color name="colorBlackText">#FF000000</color>
+
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="colorSingleAction">#d00000</color>
+</resources>

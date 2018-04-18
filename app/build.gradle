@@ -1,0 +1,40 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '27.0.3'
+
+    def varVersionName = "1.0"
+
+    defaultConfig {
+        applicationId "com.arielg.downz"
+        minSdkVersion 23
+        targetSdkVersion 24
+        versionCode 1
+        versionName varVersionName
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled true
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def date = new Date()
+                    def newName = "Downz-v" + varVersionName + "-" + date.format('yyyyMMdd-HHmmss')
+                    output.outputFileName = new File((String)output.outputFileName, (String)output.outputFileName.replace("app-release", newName))
+                }
+            }
+        }
+        debug {
+            debuggable true
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:24.2.1'
+    implementation 'com.android.support:design:24.2.1'
+    implementation 'com.android.support:support-v4:24.2.1'
+}

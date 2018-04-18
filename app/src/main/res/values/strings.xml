@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Downz</string>
+    <string name="action_select_new_file">Select new file…</string>
+    <string name="action_download">Download</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to activity interface -->
+    <string name="caption_files">Files</string>
+    <string name="caption_files_params">Files (%1$d/%2$d)</string>
+    <string name="empty_message">No files to download, yet</string>
+    <string name="legend">[R]eady, [D]ownloading, [C]ancelled, [F]inished, [E]rror</string>
+
+    <string name="notification_msg_params">Downloaded files: %1$d out of %2$d</string>
+    <string name="notification_msg_fail_params">Downloaded files: %1$d out of %2$d\nFailed: %3$d\nCancelled: %4$d</string>
+
+    <!-- Strings related to errors -->
+    <string name="error_file_not_found">File Not Found\n%1$s</string>
+    <string name="error_nothing_loaded_from_file">Nothing loaded\nFile is empty or URLs are malformed</string>
+    <string name="error_nothing_loaded_from_text_data">Nothing loaded\nData is empty or URLs are malformed</string>
+    <string name="error_reader_failed">Buffered Reader Failed\n%1$s</string>
+    <string name="error_post_file_download">Error:\n%1$s\n%2$s</string>
+    <string name="error_action_not_supported">Action and\\or Type not supported</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_title_single_action">Single action</string>
+    <string name="pref_title_show_full_url">Show full URL</string>
+    <string name="pref_title_show_downloaded_percentage">Show downloaded percentage</string>
+    <string name="pref_title_notifications">Notifications</string>
+    <string name="pref_title_recently_used_list_file">Recently used list file</string>
+    <string name="pref_title_download_folder">Download folder</string>
+    <string name="pref_title_restore_default_settings">Restore default settings</string>
+
+    <string name="pref_summery_switch_single_action_true">Select a list file and download the contained URL files with one action button</string>
+    <string name="pref_summery_switch_single_action_false">Two action buttons to select a list file and to download its contained URL files</string>
+    <string name="pref_summery_switch_show_full_url_true">List displays the full URL as written in the list file</string>
+    <string name="pref_summery_switch_show_full_url_false">List displays only the file name (last URL element)</string>
+    <string name="pref_summery_switch_show_downloaded_percentage_true">Show percentage of file downloaded</string>
+    <string name="pref_summery_switch_show_downloaded_percentage_false">Do not show percentage of file downloaded</string>
+    <string name="pref_summery_switch_notifications_true">On</string>
+    <string name="pref_summery_switch_notifications_false">Off</string>
+
+    <string name="pref_key_switch_single_action">switch_single_action</string>
+    <string name="pref_key_switch_show_full_url">switch_show_full_url</string>
+    <string name="pref_key_switch_show_downloaded_percentage">switch_show_downloaded_percentage</string>
+    <string name="pref_key_switch_notifications">switch_notification</string>
+    <string name="pref_key_text_recently_used_list_file">text_recently_used_list_file</string>
+    <string name="pref_key_text_download_folder">text_download_folder</string>
+    <string name="pref_key_button_reset_settings">button_reset_settings</string>
+
+</resources>

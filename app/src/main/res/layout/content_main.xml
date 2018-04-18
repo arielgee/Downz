@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/activity_margin"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context=".MainActivity"
+                tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:id="@+id/layoutCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/txtCaption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorPrimary"
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <!--  ProgressBar
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:indeterminate="true"
+            style="@android:style/Widget.ProgressBar" /  -->
+
+        <ProgressBar
+            android:id="@+id/progressDownloading"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:indeterminate="true"
+            style="@android:style/Widget.Material.ProgressBar.Small" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/scrollView" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/txtLegend"
+        android:layout_below="@+id/layoutCaption">
+
+        <TextView
+            android:id="@+id/txtFilesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlackText"
+            android:textIsSelectable="true"
+            android:textSize="12sp"/>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/scrollView"
+        android:layout_below="@+id/layoutCaption"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:contentDescription="@string/empty_message"
+            android:scaleType="center"
+            android:src="@drawable/ic_empty"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp"
+            android:text="@string/empty_message"
+            android:textAlignment="center"
+            android:textColor="@color/colorGrayText"
+            android:textSize="12sp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:background="@color/colorGrayText"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/txtLegend" />
+
+    <TextView
+        android:id="@+id/txtLegend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="3dp"
+        android:text="@string/legend"
+        android:textSize="12sp"/>
+
+</RelativeLayout>
